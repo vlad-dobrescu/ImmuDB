@@ -1,4 +1,4 @@
-#include ".Stack.h"
+#include "Stack.h"
 #include <string>
 
 template <typename T>
