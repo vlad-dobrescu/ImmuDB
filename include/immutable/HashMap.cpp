@@ -1,2 +1,2 @@
-#include "../include/immutable/HashMap.h"
+#include "HashMap.h"
 template class immutable::HashMap<int, int>;

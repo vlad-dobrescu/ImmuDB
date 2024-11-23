@@ -1,4 +1,4 @@
-#include "../include/immutable/PriorityQueue.h"
+#include "PriorityQueue.h"
 #include <stdexcept>
 
 template <typename T>

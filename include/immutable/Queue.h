@@ -34,6 +34,6 @@ namespace immutable {
   };
 }
 
-#include "../../src/Queue.tpp"
+#include "Queue.tpp"
 
 #endif

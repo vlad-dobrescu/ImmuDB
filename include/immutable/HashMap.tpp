@@ -1,4 +1,4 @@
-#include "../include/immutable/HashMap.h"
+#include "HashMap.h"
 
 template <typename K, typename V>
 immutable::HashMap<K, V>::HashMap() : bucketList(32, nullptr), bucketsCount(32) {}

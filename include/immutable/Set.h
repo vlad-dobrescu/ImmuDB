@@ -36,6 +36,6 @@ namespace immutable {
   };
 }
 
-#include "../../src/Set.tpp"
+#include "Set.tpp"
 
 #endif

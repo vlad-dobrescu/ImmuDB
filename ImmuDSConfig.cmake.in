@@ -1,0 +1,5 @@
+@PACKAGE_INIT@
+
+include("${CMAKE_CURRENT_LIST_DIR}/ImmuDSConfigVersion.cmake")
+
+include_directories("${CMAKE_CURRENT_LIST_DIR}/../../../include/immutable")

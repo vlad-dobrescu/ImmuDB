@@ -12,11 +12,6 @@ include_directories(include)
 
 # Add source files for the ImmuDS static library
 set(SRC_FILES
-    src/HashMap.tpp
-    src/PriorityQueue.tpp
-    src/Queue.tpp
-    src/Set.tpp
-    src/Stack.tpp
     src/HashMap.cpp
     src/PriorityQueue.cpp
     src/Queue.cpp
@@ -27,25 +22,40 @@ set(SRC_FILES
 # Create the static library
 add_library(ImmuDS STATIC ${SRC_FILES})
 
-# Install target
-install(TARGETS ImmuDS DESTINATION lib)
-
-# Install the headers
-install(DIRECTORY include/immutable DESTINATION include)
-
 # Ensure CMake knows to use the C++ linker for the static library
 set_target_properties(ImmuDS PROPERTIES LINKER_LANGUAGE CXX)
 
-# Package configuration
+
+install(DIRECTORY include/immutable DESTINATION include FILES_MATCHING PATTERN "*.h" PATTERN "*.tpp")
+
+
+# Install the static library
+install(TARGETS ImmuDS
+        EXPORT ImmuDSTargets
+        DESTINATION lib)
+
+# Install the CMake package configuration files
 include(CMakePackageConfigHelpers)
+
 write_basic_package_version_file(
     "${CMAKE_BINARY_DIR}/ImmuDSConfigVersion.cmake"
-    VERSION 1.0.0
+    VERSION ${PROJECT_VERSION}
     COMPATIBILITY AnyNewerVersion
 )
 
-# Install package configuration files
-install(FILES "${CMAKE_BINARY_DIR}/ImmuDSConfigVersion.cmake"
+configure_file(
+    ${CMAKE_CURRENT_SOURCE_DIR}/ImmuDSConfig.cmake.in
+    ${CMAKE_BINARY_DIR}/ImmuDSConfig.cmake
+    @ONLY
+)
+
+install(FILES
+    "${CMAKE_BINARY_DIR}/ImmuDSConfig.cmake"
+    "${CMAKE_BINARY_DIR}/ImmuDSConfigVersion.cmake"
+    DESTINATION lib/cmake/ImmuDS
+)
+
+install(EXPORT ImmuDSTargets
+        FILE ImmuDSTargets.cmake
+        NAMESPACE ImmuDS::
         DESTINATION lib/cmake/ImmuDS)
-
-

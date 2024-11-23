@@ -36,6 +36,6 @@ namespace immutable {
   };
 }
 
-#include "../../src/HashMap.tpp"
+#include "HashMap.tpp"
 
 #endif

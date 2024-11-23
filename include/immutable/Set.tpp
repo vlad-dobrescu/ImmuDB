@@ -1,4 +1,4 @@
-#include "../include/immutable/Set.h"
+#include "Set.h"
 #include <iostream>
 
 template <typename T>

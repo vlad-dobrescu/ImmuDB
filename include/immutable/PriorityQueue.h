@@ -34,6 +34,6 @@ private:
 
 } 
 
-#include "../../src/PriorityQueue.tpp"
+#include "PriorityQueue.tpp"
 
 #endif

@@ -1,2 +1,2 @@
-#include "../include/immutable/Queue.h"
+#include "Queue.h"
 template class immutable::Queue<int>;  

@@ -1,3 +1,3 @@
-#include "../include/immutable/Set.h"
+#include "Set.h"
 template class immutable::Set<std::string>;  
 template class immutable::Set<int>;
