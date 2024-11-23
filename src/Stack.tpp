@@ -1,4 +1,5 @@
 #include "../include/immutable/Stack.h"
+#include <string>
 
 template <typename T>
 immutable::Stack<T>::Stack() : topNode(nullptr) {}
@@ -20,35 +21,18 @@ immutable::Stack<T>::Stack(const Stack<T> &other) : topNode(nullptr) {
 }
 
 template <typename T>
-immutable::Stack<T>::~Stack() {
-    Node *current = topNode;
-    while (current) {
-        Node *nextNode = current->next;
-        delete current;
-        current = nextNode;
-    }
-}
-
-template <typename T>
-immutable::Stack<T> immutable::Stack<T>::push(const T &value) const {
-    Node *newTop = new Node(value);
+immutable::Stack<T> immutable::Stack<T>::push(const T& value) const {
+    Node* newTop = new Node(value);
 
     if (topNode != nullptr) {
-        Node *current = topNode;
-        Node *newCurrent = newTop;
-
-        while (current->next != nullptr) {
-            newCurrent->next = new Node(current->next->value);
-            newCurrent = newCurrent->next;
-            current = current->next;
-        }
+        newTop->next = topNode;
     }
 
     Stack<T> newStack;
     newStack.topNode = newTop;
+    
     return newStack;
 }
-
 
 template <typename T>
 immutable::Stack<T> immutable::Stack<T>::pop() const {
@@ -70,9 +54,9 @@ immutable::Stack<T> immutable::Stack<T>::pop() const {
     } else {
         newStack.topNode = nullptr;  
     }
+
     return newStack;
 }
-
 
 template <typename T>
 T immutable::Stack<T>::top() const {

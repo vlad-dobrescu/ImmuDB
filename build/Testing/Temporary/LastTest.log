@@ -1,0 +1,81 @@
+Start testing: Nov 22 20:24 CET
+----------------------------------------------------------
+1/1 Testing: runTests
+1/1 Test: runTests
+Command: "/Users/vladdobrescu/Desktop/proiecte/ImmuDS/build/test/runTests"
+Directory: /Users/vladdobrescu/Desktop/proiecte/ImmuDS/build/test
+"runTests" start time: Nov 22 20:24 CET
+Output:
+----------------------------------------------------------
+Running main() from /tmp/googletest-20240910-4595-56gqyq/googletest-1.15.2/googletest/src/gtest_main.cc
+[==========] Running 21 tests from 5 test suites.
+[----------] Global test environment set-up.
+[----------] 5 tests from HashMapTest
+[ RUN      ] HashMapTest.InsertAndRetrieve
+[       OK ] HashMapTest.InsertAndRetrieve (0 ms)
+[ RUN      ] HashMapTest.UpdateKey
+[       OK ] HashMapTest.UpdateKey (0 ms)
+[ RUN      ] HashMapTest.KeyExistence
+[       OK ] HashMapTest.KeyExistence (0 ms)
+[ RUN      ] HashMapTest.DeleteKey
+[       OK ] HashMapTest.DeleteKey (0 ms)
+[ RUN      ] HashMapTest.IsEmpty
+[       OK ] HashMapTest.IsEmpty (0 ms)
+[----------] 5 tests from HashMapTest (0 ms total)
+
+[----------] 3 tests from PriorityQueueTest
+[ RUN      ] PriorityQueueTest.InsertAndPeekMin
+[       OK ] PriorityQueueTest.InsertAndPeekMin (0 ms)
+[ RUN      ] PriorityQueueTest.RemoveMin
+[       OK ] PriorityQueueTest.RemoveMin (0 ms)
+[ RUN      ] PriorityQueueTest.IsEmpty
+[       OK ] PriorityQueueTest.IsEmpty (0 ms)
+[----------] 3 tests from PriorityQueueTest (0 ms total)
+
+[----------] 5 tests from QueueTest
+[ RUN      ] QueueTest.EnqueueAndFront
+[       OK ] QueueTest.EnqueueAndFront (0 ms)
+[ RUN      ] QueueTest.DequeueAndFront
+[       OK ] QueueTest.DequeueAndFront (0 ms)
+[ RUN      ] QueueTest.IsEmpty
+[       OK ] QueueTest.IsEmpty (0 ms)
+[ RUN      ] QueueTest.FrontOnEmptyQueue
+[       OK ] QueueTest.FrontOnEmptyQueue (0 ms)
+[ RUN      ] QueueTest.DequeueOnEmptyQueue
+[       OK ] QueueTest.DequeueOnEmptyQueue (0 ms)
+[----------] 5 tests from QueueTest (0 ms total)
+
+[----------] 3 tests from SetTest
+[ RUN      ] SetTest.InsertAndExists
+[       OK ] SetTest.InsertAndExists (0 ms)
+[ RUN      ] SetTest.Size
+[       OK ] SetTest.Size (0 ms)
+[ RUN      ] SetTest.Immutability
+[       OK ] SetTest.Immutability (0 ms)
+[----------] 3 tests from SetTest (0 ms total)
+
+[----------] 5 tests from StackTest
+[ RUN      ] StackTest.PushAndTop
+[       OK ] StackTest.PushAndTop (0 ms)
+[ RUN      ] StackTest.PopAndTop
+[       OK ] StackTest.PopAndTop (0 ms)
+[ RUN      ] StackTest.IsEmpty
+[       OK ] StackTest.IsEmpty (0 ms)
+[ RUN      ] StackTest.TopOnEmptyStack
+[       OK ] StackTest.TopOnEmptyStack (0 ms)
+[ RUN      ] StackTest.PopOnEmptyStack
+[       OK ] StackTest.PopOnEmptyStack (0 ms)
+[----------] 5 tests from StackTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 21 tests from 5 test suites ran. (0 ms total)
+[  PASSED  ] 21 tests.
+<end of output>
+Test time =   0.14 sec
+----------------------------------------------------------
+Test Passed.
+"runTests" end time: Nov 22 20:24 CET
+"runTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 22 20:24 CET

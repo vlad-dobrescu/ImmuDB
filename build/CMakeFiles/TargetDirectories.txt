@@ -1,0 +1,8 @@
+/Users/vladdobrescu/Desktop/proiecte/ImmuDS/build/CMakeFiles/ImmuDS.dir
+/Users/vladdobrescu/Desktop/proiecte/ImmuDS/build/CMakeFiles/test.dir
+/Users/vladdobrescu/Desktop/proiecte/ImmuDS/build/CMakeFiles/edit_cache.dir
+/Users/vladdobrescu/Desktop/proiecte/ImmuDS/build/CMakeFiles/rebuild_cache.dir
+/Users/vladdobrescu/Desktop/proiecte/ImmuDS/build/test/CMakeFiles/runTests.dir
+/Users/vladdobrescu/Desktop/proiecte/ImmuDS/build/test/CMakeFiles/test.dir
+/Users/vladdobrescu/Desktop/proiecte/ImmuDS/build/test/CMakeFiles/edit_cache.dir
+/Users/vladdobrescu/Desktop/proiecte/ImmuDS/build/test/CMakeFiles/rebuild_cache.dir

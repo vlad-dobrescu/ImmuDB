@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libImmuDS.a CMakeFiles/ImmuDS.dir/src/HashMap.cpp.o CMakeFiles/ImmuDS.dir/src/PriorityQueue.cpp.o CMakeFiles/ImmuDS.dir/src/Queue.cpp.o CMakeFiles/ImmuDS.dir/src/Set.cpp.o CMakeFiles/ImmuDS.dir/src/Stack.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libImmuDS.a

@@ -1,14 +1,13 @@
 #ifndef QUEUE_H
 #define QUEUE_H
-
+#include <string>
 namespace immutable {
 
   template <typename T>
   class Queue {
     public:
       Queue();
-      Queue(const Queue<T> &other);
-      ~Queue();
+      Queue(const Queue<T> &other);    
 
       Queue<T> enqueue(const T &value) const;
       Queue<T> dequeue() const;
@@ -29,6 +28,9 @@ namespace immutable {
 
       Queue(Node *frontList, Node *rearList);
       Node *reverse(Node *node) const;
+
+      Node* copyList(Node* list) const;
+
   };
 }
 

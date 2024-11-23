@@ -3,31 +3,32 @@
 
 namespace immutable {
 
-template <typename T>
-class Stack {
-public:
-    Stack();
-    Stack(const Stack &other);
-    ~Stack();
-
-    Stack<T> push(const T &value) const;
-    Stack<T> pop() const;
-    T top() const;        
-    bool isEmpty() const;
-
-private:
-    class Node {
+  template <typename T>
+  class Stack {
     public:
-        const T value;
-        Node *next;
+      Stack();
+      Stack(const Stack<T>& other);  
 
-        Node(const T &val) : value(val), next(nullptr) {}
-    };
+      Stack<T> push(const T& value) const;
+      Stack<T> pop() const;
+      T top() const;
+      bool isEmpty() const;
+    
+    private:
+      class Node {
+        public:
+          T value;
+          Node* next;
 
-    Node *topNode;             
-};
+          Node(const T& val) : value(val), next(nullptr) {}
+      };
 
-} 
+      Node* topNode;
+
+      Stack(Node* topNode);
+
+  };
+}
 
 #include "../../src/Stack.tpp"
 

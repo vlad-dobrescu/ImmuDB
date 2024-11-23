@@ -66,7 +66,7 @@ typename immutable::HashMap<K, V> immutable::HashMap<K, V>::insert(const K& key,
 
     while (current != nullptr) {
         if (current->key == key) {
-            current->value = val; // Update value
+            current->value = val; 
             std::vector<Node*> newBucketList = bucketList;
             newBucketList.at(index) = insertHere;
             return HashMap(newBucketList, bucketsCount);

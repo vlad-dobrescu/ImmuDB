@@ -1,26 +1,61 @@
-#include <iostream>
+#include <gtest/gtest.h>
 #include "../include/immutable/Stack.h"
 
-int main() {
+TEST(StackTest, PushAndTop) {
     immutable::Stack<int> stack;
-
+    
+    // Pushing elements onto the stack
     immutable::Stack<int> stack1 = stack.push(10);
     immutable::Stack<int> stack2 = stack1.push(20);
     immutable::Stack<int> stack3 = stack2.push(30);
 
-    std::cout << "Top of stack3: " << stack3.top() << std::endl;
-    std::cout << "Top of stack2: " << stack2.top() << std::endl;
-    std::cout << "Top of stack1: " << stack1.top() << std::endl;
+    // Test top of the stack
+    EXPECT_EQ(stack3.top(), 30);
+    EXPECT_EQ(stack2.top(), 20);
+    EXPECT_EQ(stack1.top(), 10);
+}
 
+TEST(StackTest, PopAndTop) {
+    immutable::Stack<int> stack;
+    
+    // Pushing elements onto the stack
+    immutable::Stack<int> stack1 = stack.push(10);
+    immutable::Stack<int> stack2 = stack1.push(20);
+    immutable::Stack<int> stack3 = stack2.push(30);
+
+    // Pop from the stack
     immutable::Stack<int> stack4 = stack3.pop();
-    if (!stack4.isEmpty()) {
-        std::cout << "Top of stack4 (after popping): " << stack4.top() << std::endl;
-    } else {
-        std::cout << "Stack4 is empty after popping." << std::endl;
-    }
 
-    std::cout << "Top of stack3 (unchanged): " << stack3.top() << std::endl;
-    std::cout << "Is stack empty? " << (stack.isEmpty() ? "Yes" : "No") << std::endl;
+    // Check top element after popping
+    EXPECT_EQ(stack4.top(), 20); 
+    EXPECT_NE(stack3.top(), stack4.top()); 
+}
 
-    return 0;
+TEST(StackTest, IsEmpty) {
+    immutable::Stack<int> stack;
+
+    // Check if the stack is empty
+    EXPECT_TRUE(stack.isEmpty());
+
+    // Push an element onto the stack
+    immutable::Stack<int> stack1 = stack.push(10);
+    EXPECT_FALSE(stack1.isEmpty());
+
+    // Pop the element and check again
+    immutable::Stack<int> stack2 = stack1.pop();
+    EXPECT_TRUE(stack2.isEmpty());
+}
+
+TEST(StackTest, TopOnEmptyStack) {
+    immutable::Stack<int> stack;
+
+    // Test that top throws an exception when stack is empty
+    EXPECT_THROW(stack.top(), std::out_of_range);
+}
+
+TEST(StackTest, PopOnEmptyStack) {
+    immutable::Stack<int> stack;
+
+    // Test that pop throws an exception when stack is empty
+    EXPECT_THROW(stack.pop(), std::out_of_range);
 }
