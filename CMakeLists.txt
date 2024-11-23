@@ -12,6 +12,11 @@ include_directories(include)
 
 # Add source files for the ImmuDS static library
 set(SRC_FILES
+    include/immutable/HashMap.tpp
+    include/immutable/PriorityQueue.tpp
+    include/immutable/Queue.tpp
+    include/immutable/Set.tpp
+    include/immutable/Stack.tpp
     include/immutable/HashMap.cpp
     include/immutable/PriorityQueue.cpp
     include/immutable/Queue.cpp
