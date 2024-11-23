@@ -48,6 +48,4 @@ write_basic_package_version_file(
 install(FILES "${CMAKE_BINARY_DIR}/ImmuDSConfigVersion.cmake"
         DESTINATION lib/cmake/ImmuDS)
 
-# Add tests directory to the project
-enable_testing()
-add_subdirectory(test)
+

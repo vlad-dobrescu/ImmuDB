@@ -1,6 +1,6 @@
 from conan import ConanFile
 from conan.tools.cmake import CMake, CMakeToolchain, CMakeDeps
-from conan.tools.files import copy
+from conan.tools.files import copy, export_conandata_patches, get
 
 class ImmuDS(ConanFile):
     name = "immuds"
@@ -11,15 +11,16 @@ class ImmuDS(ConanFile):
     description = "A C++ library of immutable data structures"
     topics = ("c++", "immutable", "data structures")
     settings = "os", "compiler", "build_type", "arch"
-    requires = "gtest/1.10.0"  
     generators = "CMakeToolchain", "CMakeDeps"
     
     def layout(self):
         self.folders.build = "build"
         self.folders.generators = "build/generators"
+        self.folders.source = "."
+
 
     def source(self):
-        copy(self, "*", self.source_folder, self.build_folder)
+        get(self, url="https://github.com/vlad-dobrescu/ImmuDS/archive/refs/heads/main.zip", strip_root=True)
 
     def build(self):
         cmake = CMake(self)
